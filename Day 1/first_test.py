@@ -35,19 +35,19 @@ def test_1a():
 
 def test_1b():
     test_cases = [
-        # ("1", "one"),
+        ("1one", "one"),
         ("22two", "2two"),
         ("2tw", "2tw"),
         ("22", "22"),
         ("2two2", "two2"),
         ("thirty3three", "thirtythree"),
         ("2two19nine","two1nine"),
-        ("8wo3", "eightwothree"),
-        ("abc123xyz", "abcone2threexyz"),
-        ("x2ne34","xtwone3four"),
-        ("49872","4nineeightseven2"),
-        ("z1ight234","zoneight234"),
-        ("7pqrst6teen","7pqrstsixteen"),
+        ("8eigh2two3three", "eightwothree"),
+        ("abc1one23threexyz", "abcone2threexyz"),
+        ("x2tw1one34four","xtwone3four"),
+        ("49nine8eight7seven2","4nineeightseven2"),
+        ("z1on8eight234","zoneight234"),
+        ("7pqrst6sixteen","7pqrstsixteen"),
     ]
     for test_case in test_cases:
         print(f"in test case {test_case}")
@@ -57,4 +57,4 @@ def test_1b():
 
 if __name__=="__main__":
     test_1a()
-    # test_1b()
+    test_1b()
