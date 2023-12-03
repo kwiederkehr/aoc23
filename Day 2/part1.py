@@ -30,7 +30,6 @@ def read_file(file_name: str) -> dict[str, dict[str, int]]:
 
 def get_possible_game_names(games_to_maxes: dict[str, dict[str, int]], bag_actually_contained: dict[str, int]) -> list[str]:
     possible_games = []
-    print(games_to_maxes)
     for game_name, colors_to_maxes in games_to_maxes.items():
         enough_of_each_color = [color_amount <= bag_actually_contained[color_name] for color_name, color_amount in colors_to_maxes.items()]
         if all(enough_of_each_color):
@@ -61,12 +60,10 @@ def get_powers(games_to_maxes: dict[str, dict[str, int]]) -> list[int]:
 
 
 def main():
-    print("I can do this!")
     games_to_maxes = read_file("input1.txt")
 
     bag_actually_contained = {"red":12 , "blue": 14, "green": 13}
     possible_games = get_possible_game_names(games_to_maxes, bag_actually_contained)
-    print(f"ALL THE POSSIBLE GAMES {possible_games}")
 
     total_sum = sum_game_ids(possible_games)
 
